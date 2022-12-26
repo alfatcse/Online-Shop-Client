@@ -10,7 +10,7 @@ function App() {
     <div className="bg-blue-300">
       <RouterProvider router={router}></RouterProvider>
       <Toaster />
-      <Widget />
+     
     </div>
   );
 }
