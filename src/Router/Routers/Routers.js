@@ -72,10 +72,10 @@ const router = createBrowserRouter([
                         element:<Payment></Payment>,
                         loader:({params})=>fetch(`http://localhost:5009/bookingspayment/${params.id}`)
                     },
-                    // {
-                    //     path:'/dashboard/chat',
-                    //     element:<Chat></Chat>
-                    // }
+                    {
+                        path:'/dashboard/chat',
+                        element:<Chat></Chat>
+                    }
                 ]
             }
         ]
