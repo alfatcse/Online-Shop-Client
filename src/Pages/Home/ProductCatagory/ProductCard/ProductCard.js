@@ -6,7 +6,7 @@ import { HiOutlineShieldCheck, HiOutlineXCircle } from "react-icons/hi";
 import "./ProductCard.css";
 import toast, { Toaster } from "react-hot-toast";
 import { PhotoProvider, PhotoView } from "react-photo-view";
-
+import 'react-photo-view/dist/react-photo-view.css'
 const ProductCard = () => {
   const { user } = useContext(AuthContext);
   const [data, setData] = useState([]);
