@@ -33,8 +33,9 @@ const Dashboard = () => {
                             <th>Phone Name</th>
                             <th>Price</th>
                             <th>Payment Status</th>
-                            <th>Payment</th>
                             <th>Chat</th>
+                            <th>Payment</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -57,7 +58,7 @@ const Dashboard = () => {
                                         {p?.productPrice}
                                     </td>
                                     <td> <div className='text-red-500'>{p?.paymentStatus}</div></td>
-                                    <td> <Link to='/dashboard/chat'><button className='btn btn-xs btn-primary'>Chat</button></Link></td>
+                                    <td> <Link to={`/dashboard/chat/${p._id}`}><button className='btn btn-xs btn-primary'>Chat</button></Link></td>
                                     <th>
                                         {
                                             p.paymentStatus==='Unpaid'&& <Link to={`/dashboard/payment/${p._id}`}><button className='btn btn-xs btn-primary'>Pay</button></Link>

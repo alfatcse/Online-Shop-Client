@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../AuthContext/AuthProvider';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 const SellerBuyers = () => {
     const { user } = useContext(AuthContext);
     console.log(user.email);
@@ -28,6 +29,7 @@ const SellerBuyers = () => {
                             <th>Buyer Name</th>
                             <th>Email</th>
                             <th>Phone Number</th>
+                            <th>Message</th>
                             <th>Location</th>
                         </tr>
                     </thead>
@@ -44,6 +46,7 @@ const SellerBuyers = () => {
                                     <td>
                                         {p?.buyerPhone}
                                     </td>
+                                    <td><Link ><button className='btn btn-xs btn-primary'>Chat</button></Link></td>
                                     <td>
                                         {p?.buyerMeeting}
                                     </td>

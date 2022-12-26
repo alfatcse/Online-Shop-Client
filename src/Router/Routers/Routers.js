@@ -54,7 +54,6 @@ const router = createBrowserRouter([
                         path:'/dashboard/sellerProducts',
                         element:<SellerProducts></SellerProducts>
                     },
-
                     {
                         path:'/dashboard/admindashboard',
                         element:<AdminDashboard></AdminDashboard>
@@ -73,8 +72,9 @@ const router = createBrowserRouter([
                         loader:({params})=>fetch(`http://localhost:5009/bookingspayment/${params.id}`)
                     },
                     {
-                        path:'/dashboard/chat',
-                        element:<Chat></Chat>
+                        path:'/dashboard/chat/:id',
+                        element:<Chat></Chat>,
+                        loader:({params})=>fetch(`http://localhost:5009/chat/${params.id}`)
                     }
                 ]
             }
