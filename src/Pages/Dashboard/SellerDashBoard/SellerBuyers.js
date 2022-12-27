@@ -46,7 +46,7 @@ const SellerBuyers = () => {
                                     <td>
                                         {p?.buyerPhone}
                                     </td>
-                                    <td><Link ><button className='btn btn-xs btn-primary'>Chat</button></Link></td>
+                                    <td><Link to={`/dashboard/chat/${p._id}`}><button className='btn btn-xs btn-primary'>Chat</button></Link></td>
                                     <td>
                                         {p?.buyerMeeting}
                                     </td>
