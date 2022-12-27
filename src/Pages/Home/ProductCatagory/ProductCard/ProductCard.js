@@ -6,7 +6,7 @@ import { HiOutlineShieldCheck, HiOutlineXCircle } from "react-icons/hi";
 import "./ProductCard.css";
 import toast, { Toaster } from "react-hot-toast";
 import { PhotoProvider, PhotoView } from "react-photo-view";
-import 'react-photo-view/dist/react-photo-view.css'
+import "react-photo-view/dist/react-photo-view.css";
 const ProductCard = () => {
   const { user } = useContext(AuthContext);
   const [data, setData] = useState([]);
@@ -14,7 +14,9 @@ const ProductCard = () => {
   const [userName, setusername] = useState();
   const navigate = useNavigate();
   console.log(user);
-
+  const [page, setPage] = useState(0);
+  const [size, setSize] = useState(3);
+  const [count, setCount] = useState(0);
   var options = {
     weekday: "long",
     year: "numeric",
@@ -25,7 +27,7 @@ const ProductCard = () => {
   console.log(d.toLocaleDateString("en-US", options));
   useEffect(() => {
     axios
-      .get("http://localhost:5009/catagory", {
+      .get(`http://localhost:5009/catagory?page=${page}&size=${size}`, {
         method: "GET",
         headers: {
           "content-type": "application/json",
@@ -33,11 +35,13 @@ const ProductCard = () => {
         body: JSON.stringify(),
       })
       .then((res) => {
-        console.log(res.data);
-        setData(res.data);
+        console.log("len", res.data.length);
+        setData(res.data.products);
+        setCount(res.data.count);
       })
       .catch((e) => console.log(e));
-  }, []);
+  }, [page, size]);
+  const pages = Math.ceil(count / size);
   const image = [
     "https://i.ibb.co/5n8r0CJ/liton.jpg",
     "https://i.ibb.co/5nx5W0R/masrafi.jpg",
@@ -127,7 +131,6 @@ const ProductCard = () => {
                 />
               </PhotoView>
             </PhotoProvider>
-
             <div class="px-5 pb-5">
               <h5 class="text-xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
                 {d.name}
@@ -324,6 +327,31 @@ const ProductCard = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="btn-group flex  mx-3  justify-center">
+        <div>
+          {[...Array(pages).keys()].map((number) => (
+            <button
+              className={page === number ? "btn btn-active" : "btn"}
+              onClick={() => setPage(number)}
+              key={number}
+            >
+              {number + 1}
+            </button>
+          ))}{" "}
+        </div>
+        <select
+          onChange={(event) => setSize(event.target.value)}
+          className="select  max-w-xs"
+        >
+          <option value="1" >
+            1
+          </option>
+          <option value="2">2</option>
+          <option selected value="3">3</option>
+          <option value="4">4</option>
+        </select>
       </div>
       {bookingproduct && (
         <>
@@ -527,7 +555,7 @@ const ProductCard = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="lg:w-6/12">
                 <form
                   onSubmit={handleSubmitBooking}
