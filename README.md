@@ -12,17 +12,17 @@ Open [http://sell-now.web.app](https://sell-now-b00ee.web.app/) to view it in yo
 <p align="center">
   <img src="https://i.ibb.co/zQ2w3qH/Screenshot-from-2023-01-04-12-01-35.png" width="650" alt="accessibility text">
 </p>
-`2.Loged in buyer can buy a product and after successful payment a payment status is changed`
+`2.Logged in buyer can buy a product and after successful payment a payment status is changed`
 <p align="center">
   <img src="https://i.ibb.co/346nNSP/Screenshot-from-2023-01-04-12-06-21.png" width="650" alt="accessibility text">
 </p>
 
-`3.loged in seller can add new product for sell`
+`3.logged in seller can add new product for sell`
 <p align="center">
   <img src="https://i.ibb.co/FYhvpTt/Screenshot-from-2023-01-04-12-13-02.png" width="650" alt="accessibility text">
 </p>
 
-`4.loged in seller can also view the buyers who has bought his products`
+`4.logged in seller can also view the buyers who has bought his products`
     <p align="center">
   <img src="https://i.ibb.co/nP0Rh3m/Screenshot-from-2023-01-04-11-02-53.png" width="650" alt="accessibility text">
 </p>
