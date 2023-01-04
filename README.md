@@ -1,3 +1,9 @@
+### `Live Link`
+Open [http://sell-now.web.app](https://sell-now-b00ee.web.app/) to view it in your browser.
+### `To experience the Admin role Please use the following credential`
+`admin user email: admin@a.com`
+
+`admin password: Admin1234#`
 ### `Key Feature of the project`
 `1.Register new user as seller or buyer`
 
@@ -27,10 +33,5 @@
 
 `6.Admin can also delete any user`
 
-### `Live Link`
-Open [http://sell-now.web.app](https://sell-now-b00ee.web.app/) to view it in your browser.
-### `To experience the Admin role Please use the following credential`
-`admin user email: admin@a.com`
 
-`admin password: Admin1234#`
 
