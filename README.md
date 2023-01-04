@@ -1,14 +1,17 @@
 ### `Key Feature of the project`
-`1.Register new user as doctor or patient`
+`1.Register new user as seller or buyer`
 
-![alt text](https://i.ibb.co/XFkF5Pn/Screenshot-from-2023-01-04-10-53-45.png)
-
-`2.Loged in patient can book appointment and after successful payment a confirmation email is sent`
+![alt text](https://i.ibb.co/Jrgr9nD/Screenshot-from-2023-01-04-11-30-10.png)
+`2.Loged in buyer can book a product and provide an address where product will be delivered`
 <p align="center">
-  <img src="https://i.ibb.co/Xz62MKt/Screenshot-from-2023-01-04-10-41-38.png" width="650" alt="accessibility text">
+  <img src="https://i.ibb.co/zQ2w3qH/Screenshot-from-2023-01-04-12-01-35.png" width="650" alt="accessibility text">
+</p>
+`2.Loged in buyer can buy a product and after successful payment a payment status is changed`
+<p align="center">
+  <img src="https://i.ibb.co/346nNSP/Screenshot-from-2023-01-04-12-06-21.png" width="650" alt="accessibility text">
 </p>
 
-`3.loged in doctor can publish new slot along with date and time`
+`3.loged in seller can add new product for sell`
 <p align="center">
   <img src="https://i.ibb.co/j8Yd7xp/Screenshot-from-2023-01-04-10-57-48.png" width="650" alt="accessibility text">
 </p>
@@ -29,5 +32,5 @@ Open [http://sell-now.web.app](https://sell-now-b00ee.web.app/) to view it in yo
 ### `To experience the Admin role Please use the following credential`
 `admin user email: admin@a.com`
 
-`admin password: admin1234#`
+`admin password: Admin1234#`
 
